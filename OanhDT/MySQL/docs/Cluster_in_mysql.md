@@ -1,4 +1,4 @@
-# Tìm hiểu về Clutes trong MySQL 
+# Tìm hiểu về Cluster trong MySQL 
 
 ## Mục lục
 
