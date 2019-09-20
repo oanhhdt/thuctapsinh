@@ -48,7 +48,7 @@ Các ứng dụng này phải có khả năng chịu được lỗi cao, luôn �
 - **Quorum resource**: Trong mỗi Cluster, Quorum resource chứa đựng và duy trì những thông tin cấu hình cần thiết cho việc phục hồi Cluster.
 - **Resource group** : Resource group là một tập hợp logic của các resource trong một Cluster. Một resource group tiêu biểu được tạo ra bởi các resource liên kết logic với nhau như là các ứng dụng và các thiết bị ngoại vi và dữ liệu kết hợp với các ứng dụng đó.
 
-## Các thành phần chính trong Cluster Service.
+### Các thành phần chính trong Cluster Service.
 
 **Resource manager:** cho mỗi ứng dụng chịu trách nhiệm theo dõi và điều khiển ứng dụng đó.
 
