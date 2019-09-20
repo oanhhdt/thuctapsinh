@@ -2,11 +2,16 @@
 
 ## Mục lục
 
-- [CLuster là gì ](#khainiem)
-- [Server Cluster](#server)
-    - [Ưu điểm](#uudiem)
-    - [Các thuật ngữ](#thuatngu)
-    - [Chế độ hoạt động](#hd)
+[I. CLuster là gì ](#khainiem)
+
+[II.Server Cluster](#server)
+
+- [Ưu điểm](#uudiem)
+- [Các thuật ngữ](#thuatngu)
+- [Chế độ hoạt động](#hd)
+
+[III. Các tính chất quan trọng](#tinhchat)
+
 
 
 ![](../images/clutes.png)
@@ -75,8 +80,24 @@ Mỗi máy chủ trong cluster được gọi là một node (cluster node), và
 
 - Nếu tất cả các máy chủ trong cluster là chủ động và có một node bị sự cố, các ứng dụng và dịch vụ đang chạy trên máy chủ hỏng sẽ phải chuyển sang một máy chủ khác cũng đóng vai trò node `chủ động`.
 
-Tài liệu tham khảo: 
+<a name="tinhchat"></a>
+
+## III. Các tính chất quan trọng.
+
+**Load balancer:** tạm gọi là cân bằng tải, hỗ trợ việc chia tải trong trường hợp có nhiều server có vai trò ngang nhau giữa các web server. Chia sẻ các tác vụ để nâng cao các tính năng.
+
+**High Availability:** tính sẵn sàng cao. Các node trong cluster luôn sẵn sàng để xử lý các yêu cầu. 
+
+**Scalability:** tính mở rộng. Khi các tài nguyên trong hệ thống đã đạt đến giới hạn ta có thể bổ dung thêm tài nguyên vào các cluster bằng cách cài thêm các node.
+
+**Reliability:** độ tin cậy. Cluster giảm tối thiểu những lỗi xảy ra trong hệ thống và hạn chế việc hệ thống ngừng hoạt động.
+
+### Tài liệu tham khảo: 
 
 http://aptech.fpt.edu.vn/chitiet.php?id=2725
+
+https://blog.cloud365.vn/linux/tong-quan-ve-cluster-p1/
+
+
 
 
