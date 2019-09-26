@@ -70,7 +70,7 @@ Các ứng dụng này phải có khả năng chịu được lỗi cao, luôn �
 
 **Resource Monitor:** cung cấp một interface giao tiếp giữa resource DLLs và Cluster service.
 
-<a name="hd"></a>
+<a name="hd"></a> 
 
 ### Chế độ hoạt động 
 

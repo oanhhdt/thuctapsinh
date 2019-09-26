@@ -1,0 +1,1 @@
+[Tìm hiểu về Master Slave](docs/Master_slave.md)

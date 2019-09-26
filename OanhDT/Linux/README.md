@@ -1,11 +1,5 @@
-# I. Những phần mềm cài đặt liên quan.
 
-- [Cài đặt CentOS7](docs/VMware/docs/CaidatCentOS7.md)
-- [Cài đặt Ubuntu](docs/VMware/docs/Caidatubuntu.md)
-- [MobaXterm](docs/VMware/docs/Mobaxterm.md)
-- [Static IP](docs/VMware/docs/Static_ip.md)
-
-## II. Những bài Linux cơ bản 
+## I. Những bài Linux cơ bản 
 
 - [Giới thiệu chung Linux](docs/Basic-linux/Gioi_thieu_chung_linux.md)
 - [Linux - Unix](docs/Basic-linux/Linux_Unix.md)
@@ -25,7 +19,7 @@
 - [Quản lý phần mềm dịch vụ](docs/Basic-linux/Quan_ly_phan_mem_dich_vu.md)
 - [Quản lý tiến trình](docs/Basic-linux/Quan_ly_tien_trinh.md)
 
-## III. 25 bài linux cơ bản 
+## II. 25 bài linux cơ bản 
 - [ 1.ln_command](docs/Linux_tutorial/1.ln_command.md)
 - [ 2.Working with file](docs/Linux_tutorial/2.Working_with_file.md)
 - [ 7.System_info](docs/Linux_tutorial/7.System_info.md)

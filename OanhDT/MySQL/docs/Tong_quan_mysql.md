@@ -1,7 +1,7 @@
 # Tổng quan về My SQL và MariaDB
 
 ## Mục lục 
-I. MySQL 
+[I. MySQL](#I) 
 
 [1. MySQL là gì ](#khainiem)
 
@@ -9,10 +9,12 @@ I. MySQL
 
 [3. Hoạt động của mySQL ](#hoatdong)
 
-II. MariaDB 
+[II. MariaDB ](#II)
 
+<a name="I"></a>
 
 ## I. MySQL 
+
 
 <a name="khainiem"></a>
 
@@ -48,11 +50,13 @@ MySQL là một trong những hệ thống quản lý cơ sở dữ liệu(CSDL)
 
 3. Ứng dụng trên server sẽ phản hồi thông tin và trả về kết quả trên máy client.
 
-II. MariaDB
+<a name="II"></a>
+
+## I. MariaDB
 
 MariaDB là một hệ thống quản lý cơ sở dữ liệu quan hệ mã nguồn mở (DBMS), một sự thay thế tương thích cho công nghệ cơ sở dữ liệu MySQL được sử dụng rộng rãi. Nó được tạo ra như một nhánh phần mềm của MySQL bởi các nhà phát triển, những người có vai trò quan trọng trong việc xây dựng cơ sở dữ liệu gốc.
 
-
+## III. Chuẩn hóa dữ liệu
 
 Tài liệu tham khảo 
 
