@@ -2,9 +2,9 @@
 ## MỤC LỤC
 - [Mô hình chuẩn bị](#chuanbi) 
 - [IP planing ](#IP)
-- [Cấu hình Master server](#master) 
-- [Cấu hình slave1 server](#slave1) 
-- [Cấu hình slave2 server](#slave2) 
+- [Cấu hình Master ](#master) 
+- [Cấu hình slave1 ](#slave1) 
+- [Cấu hình slave2 ](#slave2) 
 - [Kiểm tra](#kiemtra)
 
 
