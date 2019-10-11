@@ -183,6 +183,21 @@ Các bạn có thể xem cách cài đặt ở [đây](../../Service/docs/MariaD
 
 ### Bước 4: Kiểm tra
 
+**Master Server**
+
+- Đăng nhập vào Master Server 
+```
+mysql -u root -p 
+```
+- Tạo database `replica_db`
+
+```
+create database replica_db
+```
+- Sử dụng database `replica_db` tạo bảng NV 
+
+```
+create table NV (ID int primary key, )
 
 
 
