@@ -130,7 +130,7 @@
       +--------------------+----------+--------------+------------------+
       | File               | Position | Binlog_Do_DB | Binlog_Ignore_DB |
       +--------------------+----------+--------------+------------------+
-      | mariadb-bin.000004 |     577 | replica_db   |                  |
+      | mariadb-bin.000001 |     939 | replica_db   |                  |
       +--------------------+----------+--------------+------------------+
       1 row in set (0.058 sec)
     ```  
@@ -197,20 +197,86 @@ Query OK, 0 rows affected (0.044 sec)
 
 ## Cấu hình thêm slave vào hệ thống.
 
-- Bật tính năng read only để không ghi thêm dữ liệu mới vào CSDL và tắt replication :
 
-``` 
-> flush table with read lock; 
-> stop slave; 
+Thêm Slave vào hệ thống
+
+**Cấu hình trên Master**
+
+- Bật tính năng read only để không ghi thêm dữ liệu mới vào CSDL và tắt replication:
+```
+  > stop slave;
+  > flush table with read lock;  
+```
+- Tiến hành backup CSDL trên master server và chuyển nó đến slave server
 
 ```
+mysqldump --all-databases --user=root --password --master-data > masterdatabase.sql
+Enter password:
+# ls
+anaconda-ks.cfg  masterdatabase.sql  
+```
+- Đăng nhập vào MariaDB với root user và thực hiện unlock table bằng lệnh
+
+```
+  > UNLOCK TABLES;
+```
+- Copy masterdatabase.sql file tới Slave server
+
+```
+  # scp masterdatabase.sql root@10.10.22.102:/root/masterdatabase.sql
+```
+
 
 <a name="slave2"></a>
 
 ## Cấu hình slave2.
 
+- Chỉnh sửa file /etc/my.cnf và thêm vào dòng sau:
+
+  [mariadb]
+  server-id = 3
+  replicate-do-db=replica_db
+- Import CSDL master
+
+```
+mysql -u root -p < /root/replica
+Enter password:
+```
+- Restart MariaDB service để tiếp nhận thay đổi
+
+```
+systemctl restart mariadb
+```
+- Restart lại MariaDB Server để nhận cấu hình mới
+
+```
+systemctl restart mariadb
+```
+- Sử dụng user root đăng nhập vào MariaDB Server
+
+```
+mysql -u root -p
+```
+
+- Sau đó hướng dẫn Slave tìm file Master Log file và bắt đầu Slave.
+```
+> STOP SLAVE;
+> CHANGE MASTER TO MASTER_HOST='10.10.22.100', MASTER_USER='slave_user', MASTER_PASSWORD='abc@123', MASTER_LOG_FILE='master.000001', MASTER_LOG_POS=939;
+Query OK, 0 rows affected (0.051 sec)
+> START SLAVE;
+Query OK, 0 rows affected (0.044 sec)
+```
+- Kiểm tra trạng thái của Slave, sử dụng lệnh:
+
+```
+show slave status\G;
+```
+
 <a name="kiemtra"></a>
 
 ## Kiểm tra.
+
+- Sử dụng tài khoản root đăng nhập vào mysql tạo và insert thông tin vào các bảng trên máy master. Sau đó đăng nhập vào các node slave để kiểm tra thông tin đã được đồng bộ từ master qua slave hay chưa.
+
 
 
