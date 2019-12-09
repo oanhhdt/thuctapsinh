@@ -14,3 +14,4 @@ Trước tiên máy phải được cài đặt mariadb. Bạn có thể xem tà
 ## 3. Cấu hình.
 ### Trên node1.
 
+
